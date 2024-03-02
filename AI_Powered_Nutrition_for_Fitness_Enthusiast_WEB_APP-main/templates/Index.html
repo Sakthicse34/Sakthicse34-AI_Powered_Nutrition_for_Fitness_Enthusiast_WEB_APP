@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Nutrition Analyzer</title>
+        <link rel="stylesheet" href="../static/css/style.css">
+    </head>
+    <body>
+        <section class="sec">
+            <header>
+                <a href="#"><img src="{{image1}}" class="logo"></a>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>Nutrition<br><span>Analyzer</span></h2>
+                    <p>The nutrients in our food play an essential role in the human organism. They provide the energy it needs to function, but also help to build, maintain and protect it.</p>
+                    <a href="http://localhost:5000/analyser" class="link">Classify</a>
+                </div>
+                <div class="imgBox">
+                    <img src="{{image2}}" class="apple"> 
+                </div>
+            </div>
+            <ul class="thumb">
+                <li><img src="{{image2}}" onclick="imgSlider('apple.png');changeBgcolor('#6e7172')"></li>
+                <li><img src="{{image3}}" onclick="imgSlider('orange.png');changeBgcolor('#012242')"></li>
+                <li><img src="{{image4}}" onclick="imgSlider('banana.png');changeBgcolor('#861799')"></li>
+                <li><img src="{{image5}}" onclick="imgSlider('pineapple.png');changeBgcolor('#563C0D')"></li>
+                <li><img src="{{image6}}" onclick="imgSlider('watermelon.png');changeBgcolor('#3A5F0B')"></li>
+            </ul> 
+            
+        </section>
+        <script type="text/javascript">
+            function imgSlider(anything){
+                document.querySelector('.apple').src = anything;
+            }
+            function changeBgcolor(color){
+                const sec = document.querySelector('.sec');
+                sec.style.background = color;
+            }
+        </script>
+    </body>
+</html>

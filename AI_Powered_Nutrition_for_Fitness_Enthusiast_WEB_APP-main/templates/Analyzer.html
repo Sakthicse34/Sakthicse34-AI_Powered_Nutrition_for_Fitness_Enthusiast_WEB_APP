@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Analyzer</title>
+   <style>
+      *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif;
+      }
+      :root{
+         --image:   '{{image1}} '  }
+      body{
+          padding-top: 35%;
+          place-items: center;
+          text-align: center;
+          background-image: url(--image);
+          background-size: cover;
+      }
+      .BOX{
+         padding: 25px;
+         margin: 25px;
+         background-color: hsl(0, 0%, 0%);
+         color: white;
+         opacity: 70%;
+         display: flex;
+         justify-content: center;
+         align-content: center;
+         
+      }
+      </style>
+</head>
+<body>
+   <div class="BOX">
+   <form action="/ai"  method="post" enctype="multipart/form-data">
+      <input type="file"  id="'image" value="image"  name="image" >
+      <input type="submit" value="Analyze">
+   </form>
+   
+   </div>
+</body>
+</html>
